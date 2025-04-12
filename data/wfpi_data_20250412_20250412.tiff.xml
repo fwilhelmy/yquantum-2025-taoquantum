@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>USGS Earth Resources Observation Science (EROS) Center</origin>
+        <origin>Michael Oimoen</origin>
+        <pubdate>20210531</pubdate>
+        <title>Wind-enhanced Fire Potential Index (WFPI) products for the Conterminous United States (Updates Daily)</title>
+        <edition>bil</edition>
+        <geoform>raster digital data</geoform>
+        <onlink>https://doi.org/10.5066/P9YN9DSN</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Jeffery C. Eidenshink</origin>
+            <origin>Stephen M. Howard</origin>
+            <pubdate>20210531</pubdate>
+            <title>United States Geological Survey Fire Science—Fire Danger Monitoring and Forecasting</title>
+            <geoform>publication</geoform>
+            <onlink>https://dx.doi.org/10.3133/fs20123121</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>FGDC metadata provide description for Wind-enhanced Fire Potential Index (WFPI) products also for WFPI-based Large Fire Probability (WLFP) and WFPI-based Fire Spread Probability (WFSP) products. In addition to the three products the following weekly Relative Greenness (RG), Maximum Live Ratio, Wind Speed, Precipitation, Dry Bulb temperature in Fahrenheit, and 10 hour timelag dead fuel moisture raster data are being produced weekly and daily and applied as input for WFPI production. Currently WFPI is an active data that is being updated and generated daily. WFPI provide 7 day forecast based on the beforementioned raster data products.</abstract>
+      <purpose>The purpose of the fire danger products is to provide users with detailed information on ways to identify the potential for a large fire, indicate moisture-based vegetation flammability, predict number of 1000+ acre fires in the west and 500+ acre fires in the east within a PSA over the next week, along with the probability of exceeding the predicted number of fires, portray how green the vegetation is compared to how green it has been historically, and to indicate live green vegetation, incorporated new precipitation 7 day forecast, as well as provide a measure of vegetation moisture content.</purpose>
+      <supplinf>Wind-enhanced Fire Potential Index (WFPI) is derived from FPI (Fire Potential Index) which is unit-less numerical indication of fuel availability and vegetation flammability in windy conditions. Wind and precipitation forecasts beyond 3 days has improved in recent years and made it possible to create WFPI, also the following two datasets are continuously being produced; national 1 km resolution land cover characteristics database, normalized difference vegetation index (NDVI) maps. </supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20250412</begdate>
+          <enddate>20250412</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>day</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-128.5434</westbc>
+        <eastbc>-65.3866</eastbc>
+        <northbc>51.7778</northbc>
+        <southbc>22.4772</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>imageryBaseMapsEarthCover</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>GIS</themekey>
+        <themekey>fire potential</themekey>
+        <themekey>USGS</themekey>
+        <themekey>hazards</themekey>
+        <themekey>forecasting</themekey>
+        <themekey>fire</themekey>
+        <themekey>statistical analysis</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>United States</placekey>
+        <placekey>Conterminous US</placekey>
+        <placekey>Lower 48</placekey>
+      </place>
+    </keywords>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>None.  Users are advised to read the dataset's metadata thoroughly to understand appropriate use and data limitations.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS EROS</cntorg>
+          <cntper>Customer Services</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>479014 252sn Street</address>
+          <city>Sioux Falls</city>
+          <state>SD</state>
+          <postal>57198</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>800-252-4547</cntvoice>
+        <cntemail>custserv@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Credit for Fire Danger methodology contributions:
+
+Robert E. Burgan: (Retired) USDA Forest Service, Rocky Mountain Research Station, Missoula, MT  59807
+
+Haiganoush K. Preisler: (Emerita) USDA Forest Service, Pacific Southwest Research Station, Albany, CA 94706</datacred>
+    <native>Python Product Generation (PPG) developed by Michael Oimoen, Claudia J. Young, Danny Howard, and Devendra Dahal is being applied in WFPI, WLFP, WFSP production. </native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No checks applied</attraccr>
+    </attracc>
+    <logic>No checks applied</logic>
+    <complete>N/A</complete>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>US Forest Service</origin>
+            <pubdate>20210531</pubdate>
+            <title>National Fire Danger Rating System (NFDRS) 10-hour Dead Fuel Moisture. Computed from observation time temperature, humidity, and cloudiness. Or can be an observed value, from a standard set of "10-Hr Fuel Sticks" that are weighed as part of the fire weather observation.</title>
+            <geoform>raster digital data</geoform>
+            <onlink>https://www.wfas.net/index.php/dead-fuel-moisture-moisture--drought-38</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>20250412</begdate>
+              <enddate>20250412</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Ten Hour Dead Fuel Moisture</srccitea>
+        <srccontr>Indication of current fire fuel conditions</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>NFDR fuel model map or a vegetation map:
+NFDR fuel map is vegetation cover map over continental US. The data is 8 bit unsigned raster with defined 21 values are identified into different vegetation types and they are following:
+
+1. Western annual grasses
+2. California mixed chaparral
+3. Pine grass savanna
+4. Southern rough
+5. Hardwoods (winter) 
+6. Intermediate brush
+7. Short needle conifers with heavy dead load
+8. Short needle conifers, normal dead
+9. Heavy logging slash1
+10. Intermediate logging slash1
+11. Light logging slash1
+12. Western perennial grasses
+13. Agricultural land1
+14. Sawgrass, thick stemmed grasses
+15. High pocosin
+16. Southern pine plantation
+17. Alaskan black spruce
+18. Hardwoods (summer)
+19. Alpine tundra
+20. Sagebrush-grass mixture
+21. Western long-needle conifer	
+</procdesc>
+        <procdate>1978</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Extinction moisture map:
+Moisture content of dead fuel at which fire will no longer spread. The values are in percent; 15, 20, 25, 30. The raster file is 8 bit unsigned.
+Extinction moisture value varies and directly dependent to vegetation fuel type, and is generally higher at moist climates. 
+</procdesc>
+        <procdate>1996</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Relative Greenness:
+The purpose of using relative greenness in the WFPI model is to define the proportion of live and dead vegetation. Relative greenness maps compare current weekly greenness to a historically observed Normalized Difference Vegetation Index  (NDVI) range. On relative greenness maps, any pixel appears fully green The basis for calculating RG is historical NDVI data (1990-2004) that defines the maximum and minimum NDVI values observed for each pixel. Thus RG indicates how green each pixel currently is in relation to the range of historical NDVI observations for it. RG values are scaled from 0 to 100, with low values indicating the vegetation is at or near its minimum greenness.
+
+Specifically the algorithm is:
+
+RG = (NDo - NDmn) / (NDmx - NDmn)  *  100
+
+where
+NDo = highest observed NDVI value for the 1 week composite period 
+NDmn = historical minimum NDVI value for a given pixel 
+NDmx = historical maximum NDVI value for a given pixel
+
+To assess condition of living vegetation the NDVI rasters are derived for a period of a week. NDVI data is at 1 kilometer (km) resolution (about 0.6 mile). NDVI is a quotient of ratio between the difference of near infrared and visible wavelength (red) divided by the sum of near infrared and visible red wavelength reflectance observations.
+
+NDVI=  (Near Infrared-Red Visible Wavelength)/(Near Infrared+Red Visible Wavelength)
+
+NDVI index range from -1.0 to 1.0, low vegetation level index is around -1 and high vegetation level index is around +1. 
+</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Maximum live ratio map:
+Maximum live ratio map is derived from the maximum NDVI map of the conterminous United States with equation;
+
+LRmx = 25 + 50 * (NDmx  - 100)/ 95 
+
+where
+
+LRmx = Live ratio for a given pixel when the vegetation is at maximum greenness
+NDmx = historical maximum NDVI for a given pixel.
+The 1-km maximum live ratio map depicts the estimated maximum proportion of the total surface fuel bed that is green under the current greenness conditions. 
+The values ranges from 0.0 to 1.0. 
+</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Wind speed map:
+Wind speed raster file in 8bit unsigned integer give wind speed in continental US with unit knots. It is updated daily from weather nfdr meteorological forecasts.</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Wind speed reduction factor map:
+Wind speed reduction (WSR) factor map is derived from NFDR fuel model. The WSR factor map accounts for slowing of the wind from anemometer height (10 meters above the vegetation) to mid-flame height, due to the resistance of vegetation to airflow. The factor values are 0.4, 0.5, and  0.6. 
+</procdesc>
+        <procdate>1996</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Precipitation map:
+7 days Quantitative Precipitation Forecasts (QPF) maps are accumulated 24 hours precipitation raster data. The raster data is in 2.5 km cell size 64 bit with unit Kg/m2 and is equivalent to mm. QPF is acquired from NOAA and it get updated daily.
+</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Dry bulb temperature:
+Dry bulb temperature unit is Fahrenheit and is developed to be 8 bit signed char. Dry bulb data provides indication of the fire will not likely spread when the air temperature is below 45 Fahrenheit degrees. Dry bulb temperature does not have any effect on WFPI production when the temperature is above 45 Fahrenheit temperature.</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>10 hour timelag dead fuel moisture map:
+Ten hour time lag fuels are defined as dead woody vegetation in the size range of 0.6 to 2.5 cm in diameter. The probability that a wildland fire will ignite and spread is strongly dependent on the moisture content of small dead vegetation. 10 hour time lag means the woody vegetation moisture content will change about 2/3 of the difference between initial and final conditions in 10 hour time lag period. 10 hour time lag fuel moisture was selected to represent the moisture content of all dead vegetation in the 1 to 10 hour time lag size classes. The data is in raster 8 bit signed format with values ranging from -128 to 127 and resolution 1-km pixels.
+</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Wind-enhanced Fire Potential Index (WFPI) is numerical rating of fuel availability and ignitability based on estimates of the proportion of dead vegetation and its dryness in windy conditions.
+The main formulas combining various maps; NFDR wind speed reduction factors, dead fuel extinction moisture parameter map, maximum live ratio map, Relative Greenness (RG) map,  10 hour timelag dead fuel moisture map, wind speed map, wind speed reduction factor map, precipitation map, dry bulb map, and , all together produces a WFPI map. Equations are following:
+
+WFPI  = FPI + FPI * WS/35.0 * WSR/10.0 +0.5
+
+where
+WFPI  = “windy FPI”
+WS = wind speed in knots
+WSR = wind speed reduction factor (0.4, 0.5, 0.6)
+
+FPI = “no wind” FPI =(1 - TNf ) * (1 -  LR) * 100
+TNf = fractional ten hour fuel moisture = (FM10 - 2)/( MXd - 2)
+FM10 = ten hour moisture (percent) 
+MXd = dead fuel extinction moisture (percent)
+LR = Live fuel ratio = RGf * LRmx / 100 
+RGf = RG/100 where RG= Relative greenness</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Predictive Service Area: 
+Predictive Service Area (PSA) is sub-geographic areas that has similar climate, fuels and topography. The PSA areas are smaller areas divided within the depicted in geographic area coordination center (GACC) plot. PSA is applied in geographical division of WLFP graphs for Expected Large Fires per Predictive Service Area (PSA) Maps.</procdesc>
+        <procdate>Unknown</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>WFPI-based Large Fire Probability (WLFP) is probability of a large fire occurrence where a large fire is defined as fire burning more than 500 acres (202ha). The WLFP metric is evaluated by the observed proportion of voxels (km2-day) in each of the 12 WFPI levels with a large fire during the period between 2001-2017.
+
+WLFPi = pi×π / [1 – pi × (1-π)] where pi = Ri/Ni  and 
+Ri =  Number of observed large fires (&gt;500 ha) between 2001 – 2017
+Ni = Total number of large fires and the sample of no-fire voxels between 2001 – 2017. 
+
+The total sample size, for all large fire voxels and a sample of no-fire voxels, was 92,898 cases. </procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>WFPI-based Fire Spread Probability (WFSP) is probability that an existing one-acre fire will spread and burn more than 500 acres. The WFSP is estimated by the proportion of large fires observed during a historic period at each of 12 WFPI classes (0-10,10-20,…,90-100,100-120,&gt;120). The formula for estimating WSP with this model is,
+WSPi = Ri/Ni  for i= 1, 2, …, 12 and
+Ri =  Number of observed large fires (&gt;500 ha) in CONUSA during the period between 2001-2015
+Ni = Total Number of one-acre fires in the same period.
+
+The total sample size was 223,526 cases of one-acre fires.</procdesc>
+        <procdate>ENDDATE</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+      <rowcount>2890</rowcount>
+      <colcount>4588</colcount>
+      <vrtcount>1</vrtcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>Lambert Azimuthal Equal Area</mapprojn>
+          <lamberta>
+            <longpc>-100.0</longpc>
+            <latprjc>45.0</latprjc>
+            <feast>0.0</feast>
+            <fnorth>0.0</fnorth>
+          </lamberta>
+        </mapproj>
+        <planci>
+          <plance>row and column</plance>
+          <coordrep>
+            <absres>1000.0</absres>
+            <ordres>1000.0</ordres>
+          </coordrep>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>Sphere_ARC_INFO</horizdn>
+        <ellips>Sphere_ARC_INFO</ellips>
+        <semiaxis>6370997.0</semiaxis>
+        <denflat>1.0</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>fp210211.hdr</enttypl>
+        <enttypd>Raster geospatial data file.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>WFPI Unique numeric values contained in each raster cell.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>254.0</rdommax>
+            <attrunit>Unitless index</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>fp210211.hdr</enttypl>
+        <enttypd>Raster geospatial data file.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>WLFP is statistical estimation of probability per million of large fire event for more than 500 acres in a given date.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>7</rdommax>
+            <attrunit>Per Million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>ps210211.hdr</enttypl>
+        <enttypd>Raster geospatial data file.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>WFSP is statistical estimation of probability in percent of existing 1 acre fire will spread and burn more than 500 acres. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>30</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>WFPI maps provide fuel availability and vegetation flammability in windy conditions across the U.S., on a scale of 0 to 247 and show a colormap from 0 to 254 in GeoTIFF format.
+WLFP depicts the probability per million of large fire occurrence for more than 500 acres. Raster values ranging from 0 to &gt;7. Values ranging from 0-1 is considered low , 1.01 - 3 moderate, 3.01 - 5 high and 5.01 - &gt;7 very high / extreme.
+WFSP is probability in percent that an existing one-acre fire will spread and burn more than 500 acres. Values ranging from 0 to 5 is low probability, values 5.01 - 20 moderate probability, values 20.1 - 29.9 is high probability and value &gt;=30 is very high / extreme probability. </eaover>
+      <eadetcit>Data description can be found at:
+https://www.usgs.gov/ecosystems/lcsp/fire-danger-forecast/about-fire-danger-forecast
+Data information can be found at: 
+https://www.usgs.gov/ecosystems/lcsp/fire-danger-forecast/data-tools</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey</cntorg>
+          <cntper>GS ScienceBase</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>None</distliab>
+    <stdorder>
+      <digform><digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt><onlinopt><computer><networka><networkr>https://doi.org/10.5066/P9YN9DSN</networkr></networka></computer></onlinopt></digtopt></digform>
+      <fees>Fire probability data are downloadable at no cost to the user.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20210513</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS EROS</cntorg>
+          <cntper>Customer Services</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>47914 252nd Street</address>
+          <city>Sioux Falls</city>
+          <state>SD</state>
+          <postal>57198</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>800-252-4547</cntvoice>
+        <cntemail>custserv@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
