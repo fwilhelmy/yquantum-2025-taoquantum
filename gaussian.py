@@ -28,7 +28,7 @@ with rasterio.open(tiff_file) as src:
 
 # Optional: Downsample the fire grid if you need coarser resolution.
 # Here we use a block size of (5000, 5000); adjust as needed.
-downsampled_fire = block_reduce(fire_data, block_size=(500, 500), func=np.mean)[:5, :5]
+downsampled_fire = block_reduce(fire_data, block_size=(500, 500), func=np.mean)[:3, :3]
 print("Downsampled fire grid shape:", downsampled_fire.shape)
 
 # Define the grid shape from the downsampled fire data.
@@ -50,6 +50,8 @@ spread_matrix = fire_vector[:, np.newaxis] * gauss_matrix
 
 # Create a diagonal matrix from the fire intensities.
 fire_matrix = np.diag(fire_vector)
+
+
 
 # The full matrix combines the direct fire values and the spread influence.
 full_matrix = fire_matrix + spread_matrix
@@ -81,3 +83,4 @@ plt.colorbar()
 
 plt.tight_layout()
 plt.show()
+
