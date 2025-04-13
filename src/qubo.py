@@ -1,7 +1,7 @@
 import numpy as np
 from qiskit_optimization import QuadraticProgram
 
-def create_qubo(lambda1: float = 0.5, lambda2: float = 10000, k_constraint: int = 3) -> QuadraticProgram:
+def create_qubo(matrix, lambda1: float = 0.5, lambda2: float = 10000, k_constraint: int = 3) -> QuadraticProgram:
     """
     Create a Quadratic Unconstrained Binary Optimization (QUBO) problem.
     It reads Q from a file, creates a constraint matrix K, and constructs the QUBO.
@@ -15,7 +15,7 @@ def create_qubo(lambda1: float = 0.5, lambda2: float = 10000, k_constraint: int 
         QuadraticProgram: The constructed QUBO.
     """
     # Load Q (assuming the file exists at the given path)
-    Q = -np.load("results/full_matrix.npy")
+    Q = matrix
     M = Q.shape[0]
     
     # Create constraint matrix K

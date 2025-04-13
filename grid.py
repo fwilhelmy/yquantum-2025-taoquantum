@@ -27,7 +27,7 @@ zoomed_region_downsampled = downsampled_grid[y_start//block_size[0] : y_end//blo
                                               x_start//block_size[1] : x_end//block_size[1]]
 
 
-from gaussian import gaussian_distance_matrix_zero_diag
+from old_code.gaussian import gaussian_distance_matrix_zero_diag
 
 # Create a Gaussian object with the downsampled grid
 gauss = gaussian_distance_matrix_zero_diag(np.diag(downsampled_grid[0 : 2, 0 : 2].flatten()))
