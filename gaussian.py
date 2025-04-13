@@ -28,14 +28,14 @@ with rasterio.open(tiff_file) as src:
 
 # Optional: Downsample the fire grid if you need coarser resolution.
 # Here we use a block size of (5000, 5000); adjust as needed.
-downsampled_fire = block_reduce(fire_data, block_size=(500, 500), func=np.mean)
+downsampled_fire = block_reduce(fire_data, block_size=(500, 500), func=np.mean)[:5, :5]
 print("Downsampled fire grid shape:", downsampled_fire.shape)
 
 # Define the grid shape from the downsampled fire data.
 grid_shape = downsampled_fire.shape
 
 # Compute the Gaussian distance matrix over the grid.
-sigma = 1  # Adjust sigma as required.
+sigma = 1 # Adjust sigma as required.
 gauss_matrix = gaussian_distance_matrix_zero_diag(grid_shape, sigma)
 print("Gaussian distance matrix shape:", gauss_matrix.shape)
 print("Gaussian distance matrix:")
