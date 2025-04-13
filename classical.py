@@ -74,6 +74,7 @@ N = 25
 
 # Create a random Q matrix for the example.
 # QUBO matrices don't need to be symmetric or positive definite.
+
 # Elements can be positive or negative.
 np.random.seed(42) # for reproducibility
 Q_matrix = np.load("results/full_matrix.npy")
@@ -84,6 +85,10 @@ Q_matrix = Q_matrix * -1
 lambda1 = 0.5
 lambda2 = 10000
 k_constraint = 3
+beta = 1000
+
+D_matrix = np.load("results/gauss_matrix.npy")
+#D = D_matrix * beta
 M = Q_matrix.shape[0] 
 
 # Create K filled with the off-diagonal value lambda2
@@ -105,7 +110,7 @@ print(f"Solving QUBO for a {N}x{N} matrix.")
 print("-" * 30)
 
 # --- Solve using Exhaustive Search ---
-best_x_vector, min_qubo_value, time_taken = solve_qubo_exhaustive(Q_matrix+K)
+best_x_vector, min_qubo_value, time_taken = solve_qubo_exhaustive(Q_matrix+K-D)
 
 # --- Corrected Verification ---
 print("-" * 30)
