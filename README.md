@@ -13,3 +13,10 @@
 # Hackathon Challenge for YQuantum 2025 - Wildfire Response 
 To get started with this challenge, please read [TahoeQuantumChallenge.ipynb](TahoeQuantumChallenge.ipynb). 
 For help setting up an environment please see [qbraid_instructions.ipynb](qbraid_instructions.ipynb).
+
+# Credits
+- Artem Tikhonov – University of California, Davis
+- Albin Franzén – University of California, Davis/Lund University, Sweden
+- Félix Wilhelmy – École de technologie supérieure (ÉTS Montréal)
+- Gabriel Lemay – École de technologie supérieure (ÉTS Montréal)
+- Grace Pang – University of California, Davis
