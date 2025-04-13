@@ -76,7 +76,26 @@ N = 25
 # QUBO matrices don't need to be symmetric or positive definite.
 # Elements can be positive or negative.
 np.random.seed(42) # for reproducibility
-Q_matrix = np.random.randn(N, N)
+Q_matrix = np.load("results/full_matrix.npy")
+print(Q_matrix)
+#Q_matrix = np.diag(Q_matrix.flatten()) # Make it diagonal, using flatten() directly
+Q_matrix = Q_matrix * -1
+
+lambda1 = 0.5
+lambda2 = 10000
+k_constraint = 3
+M = Q_matrix.shape[0] 
+
+# Create K filled with the off-diagonal value lambda2
+K = np.full((M, M), lambda2)
+
+# Calculate and set the diagonal value
+diagonal_value_K = -lambda1 + lambda2 * (1 - 2 * k_constraint)
+np.fill_diagonal(K, diagonal_value_K)
+
+
+
+#np.random.randn(N, N)
 
 # Optional: Make Q upper triangular (often the standard form, but not strictly necessary for x^T Q x)
 # Q_matrix = np.triu(Q_matrix)
@@ -86,23 +105,34 @@ print(f"Solving QUBO for a {N}x{N} matrix.")
 print("-" * 30)
 
 # --- Solve using Exhaustive Search ---
-best_x_vector, min_qubo_value, time_taken = solve_qubo_exhaustive(Q_matrix)
+best_x_vector, min_qubo_value, time_taken = solve_qubo_exhaustive(Q_matrix+K)
 
+# --- Corrected Verification ---
 print("-" * 30)
 if best_x_vector is not None:
     print("Optimal binary vector x found:")
-    # Only print first and last few elements if N is large
-    if N > 10:
-        print(f"  First 5 elements: {best_x_vector[:5]}")
-        print(f"  Last 5 elements:  {best_x_vector[-5:]}")
+    # Use M (actual dimension) for checking size, not N
+    if M > 10:
+         # Print the whole vector if it's all ones, as that's revealing
+        if np.all(best_x_vector == 1):
+             print(f"  x = all ones (length {M})")
+        elif np.all(best_x_vector == 0):
+             print(f"  x = all zeros (length {M})")
+        else:
+            print(f"  First 5 elements: {best_x_vector[:5]}")
+            print(f"  Last 5 elements:  {best_x_vector[-5:]}")
+            print(f"  Number of ones:   {np.sum(best_x_vector)}") # Useful info
     else:
         print(f"  x = {best_x_vector}")
+        print(f"  Number of ones: {np.sum(best_x_vector)}")
 
-    print(f"\nMinimum QUBO value f(x) = x^T*Q*x: {min_qubo_value:.6f}")
+    # Use Q_matrix + K in the print statement label
+    print(f"\nMinimum QUBO value f(x) = x^T*(Q_matrix + K)*x: {min_qubo_value:.6f}")
 
-    # Verification (optional): Recalculate value with the found vector
-    verify_value = best_x_vector @ Q_matrix @ best_x_vector
-    print(f"Verification calculation: {verify_value:.6f}")
+    # Verification: Recalculate value using Q_matrix + K
+    # THIS IS THE FIX: Use the same matrix as the solver
+    verify_value = best_x_vector @ (Q_matrix + K) @ best_x_vector
+    print(f"Verification calculation (using Q_matrix + K): {verify_value:.6f}") # Label correction
     assert np.isclose(min_qubo_value, verify_value), "Verification failed!"
 else:
     print("QUBO solving failed (likely input error).")
