@@ -59,6 +59,7 @@ print("Full matrix shape:", full_matrix.shape)
 print("Full matrix:")
 print(full_matrix)
 
+
 # Visualization: Create a figure with three subplots.
 plt.figure(figsize=(18, 6))
 

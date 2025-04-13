@@ -1,6 +1,7 @@
 import numpy as np
 import itertools
 import time
+from qiskit.primitives import Sampler
 
 def solve_qubo_exhaustive(Q):
     """
@@ -110,7 +111,7 @@ print(f"Solving QUBO for a {N}x{N} matrix.")
 print("-" * 30)
 
 # --- Solve using Exhaustive Search ---
-best_x_vector, min_qubo_value, time_taken = solve_qubo_exhaustive(Q_matrix+K-D)
+best_x_vector, min_qubo_value, time_taken = solve_qubo_exhaustive(Q_matrix+K)
 
 # --- Corrected Verification ---
 print("-" * 30)
