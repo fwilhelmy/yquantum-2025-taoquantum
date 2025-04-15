@@ -63,24 +63,11 @@ print(full_matrix)
 # Visualization: Create a figure with three subplots.
 plt.figure(figsize=(18, 6))
 
-# Subplot 1: Original fire data (optionally, you may zoom in if the full image is large)
-plt.subplot(1, 3, 1)
-# Here we display the full original fire data.
+# Here we display the full original fire data with no x or y labels.
 plt.imshow(fire_data, cmap='hot')
-plt.title("Original Fire Data")
 plt.colorbar()
-
-# Subplot 2: Downsampled fire grid
-plt.subplot(1, 3, 2)
-plt.imshow(downsampled_fire, cmap='hot')
-plt.title("Downsampled Fire Grid")
-plt.colorbar()
-
-# Subplot 3: Full matrix (fire + spread influence)
-plt.subplot(1, 3, 3)
-plt.imshow(full_matrix, cmap='hot')
-plt.title("Full Matrix (Fire + Spread)")
-plt.colorbar()
+plt.xticks([])
+plt.yticks([])
 
 plt.tight_layout()
 plt.show()
