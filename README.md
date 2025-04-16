@@ -25,6 +25,12 @@ We focused on real-time **resource allocation** for wildfire containment using r
 
 ---
 
+## Presentation slides
+
+🔗 https://www.figma.com/slides/AoE6llCzPQSPakLzSdzfms/YQuantum-2025?node-id=1-37&t=x64HldZS7uNAvMrU-1
+
+---
+
 ## How to Run the Application
 
 To execute the wildfire response optimization pipeline, run the `main.py` script with the following arguments:
